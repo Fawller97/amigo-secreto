@@ -39,6 +39,8 @@ function adicionarAmigo(){
 
         let resultado = document.getElementById('resultado');
         resultado.innerHTML = `<li>O Amigo sorteado foi: <strong>${resultadoSorteio}</strong></li>`;
+        let lista = document.getElementById('listaAmigos');
+        listaAmigos.innerHTML= '';
        
     }
 
