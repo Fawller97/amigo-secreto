@@ -8,10 +8,24 @@ function adicionarAmigo(){
      if(nomeDigitado == ""){
         alert('Por Favor insira um nome ! ')
      }else {
- listaNomes.push(nomeDigitado);
-    document.querySelector('input').value = '';
-    console.log(listaNomes);
+            listaNomes.push(nomeDigitado);
+            atualizarlista()
+            document.querySelector('input').value = '';
+    
      }
-      
-       
-     }
+
+    }
+    function atualizarlista(){
+      let lista = document.getElementById('listaAmigos');
+      listaAmigos.innerHTML='';
+        listaNomes.forEach((nomeDigitado) =>{
+            let item = document.createElement('li');
+            item.textContent = nomeDigitado;
+            lista.appendChild(item);
+
+        });
+
+    }
+
+     
+
