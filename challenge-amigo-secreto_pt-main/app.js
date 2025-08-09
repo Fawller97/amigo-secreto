@@ -27,5 +27,23 @@ function adicionarAmigo(){
 
     }
 
+     function sortearAmigo(){
+        if(listaNomes == 0) {
+            alert ("Favor preencha a lista para podermos sortear um amigo");
+            return;
+        }
+            
+        let amigoSorteado = Math.floor(Math.random() * listaNomes.length);
+
+        let resultadoSorteio = listaNomes[amigoSorteado];
+
+        let resultado = document.getElementById('resultado');
+        resultado.innerHTML = `<li>O Amigo sorteado foi: <strong>${resultadoSorteio}</strong></li>`;
+       
+    }
+
+     
+
+    
      
 
